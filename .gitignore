@@ -1,0 +1,9 @@
+/node_modules
+/package-lock.json
+/.idea
+/logs
+/lib
+/keydata
+/src/daemon
+/srv
+/dest

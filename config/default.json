@@ -1,0 +1,15 @@
+{
+  "http" : {
+    "port" : 8001
+  },
+  "licensesdb" : {
+    "ip" : "172.17.1.251",
+    "port" : 30003,
+    "db" : "raspberry",
+    "username" : "rb",
+    "password" : "raspberry"
+  },
+  "logger" : {
+    "logDir" : "./logs/"
+  }
+}
