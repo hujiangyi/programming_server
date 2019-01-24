@@ -20,7 +20,7 @@ const actionListSchema = new Schema({
         actionSchema
     ]
 }, { collection: 'actions'});
-exports.actions = db.model('actions', actionSchema);
+exports.actions = db.model('actions', actionListSchema);
 
 const logsSchema = new Schema({
     log: String,
