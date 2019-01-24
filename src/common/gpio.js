@@ -70,7 +70,6 @@ function resetAllPinState() {
             pin.digitalWrite(LOW);
         }
     }
-    return states;
 }
 exports.resetAllPinState = resetAllPinState;
 
@@ -79,11 +78,10 @@ function doAction(actions) {
         initGpio()
     }
     actions.forEach(function (action, index) {
-        let pin = gpio[action.pinPhy - 1];
+        let pin = getGpioByPhyCode(action.pinPhy);
         if (pin !== null) {
             pin.digitalWrite(action.state);
         }
     });
-    return states;
 }
 exports.doAction = doAction;
