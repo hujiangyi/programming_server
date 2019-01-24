@@ -2,7 +2,7 @@
   "http" : {
     "port" : 8001
   },
-  "licensesdb" : {
+  "raspberrydb" : {
     "ip" : "172.17.1.251",
     "port" : 30003,
     "db" : "raspberry",
