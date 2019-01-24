@@ -53,6 +53,7 @@ app.post('/api/loadpinstate', pi3.loadpinstate);
 app.post('/api/resetpin', pi3.resetpin);
 app.post('/api/addaction', pi3.addaction);
 app.post('/api/deleteaction', pi3.deleteaction);
+app.post('/api/doaction', pi3.doaction);
 
 app.use("*", operationlog.addOperationLog);
 app.listen(port);

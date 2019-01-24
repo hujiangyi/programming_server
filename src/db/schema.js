@@ -10,9 +10,8 @@ const userSchema = new Schema({
 exports.user = db.model('user', userSchema);
 
 const actionSchema = new Schema({
-    bcmNum: Number,
-    mode: Number,
-    state: Number,
+    pinPhy: Number,
+    power: Number,
 }, { _id:false});
 
 const actionListSchema = new Schema({
@@ -20,8 +19,8 @@ const actionListSchema = new Schema({
     actionList: [
         actionSchema
     ]
-}, { collection: 'actionlist'});
-exports.actionlist = db.model('actionlist', actionListSchema);
+}, { collection: 'actions'});
+exports.actions = db.model('actions', actionSchema);
 
 const logsSchema = new Schema({
     log: String,

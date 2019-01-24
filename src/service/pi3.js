@@ -43,3 +43,23 @@ exports.deleteaction = function (req, res, next) {
         isSuccess : true,
     });
 };
+exports.doaction = function (req, res, next) {
+    const actionId = req.body.actionId;
+    let query = model.actionlist.findById(actionId);
+    query.exec(function (err,doc) {
+        let re = {};
+        if(doc === undefined || doc === null){
+            re = {
+                isSuccess : false,
+            };
+        } else {
+            const actions = doc.get("actionList");
+            gpio.doAction(actions);
+            re = {
+                isSuccess : true,
+            };
+        }
+
+        utils.end(req,next,re);
+    });
+};
