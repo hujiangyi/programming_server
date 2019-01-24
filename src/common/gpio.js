@@ -80,7 +80,7 @@ function doAction(actions) {
     actions.forEach(function (action, index) {
         let pin = getGpioByPhyCode(action.pinPhy);
         if (pin !== null) {
-            pin.digitalWrite(action.state);
+            pin.digitalWrite(action.power);
         }
     });
 }

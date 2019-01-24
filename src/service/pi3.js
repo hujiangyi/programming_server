@@ -6,7 +6,7 @@ exports.loadpinstate = function (req, res, next) {
     let allState = gpio.readAllPinState();
     utils.end(req,next,{
         isSuccess : true,
-        pinState : JSON.stringify(allState)
+        pinstate : allState
     });
 };
 exports.resetpin = function (req, res, next) {
@@ -14,11 +14,11 @@ exports.resetpin = function (req, res, next) {
     let allState = gpio.readAllPinState();
     utils.end(req,next,{
         isSuccess : true,
-        pinState : JSON.stringify(allState)
+        pinState : allState
     });
 };
 exports.addaction = function (req, res, next) {
-    let action = [
+    let actions = [
         {pinPhy:3,power:gpio.HIGH},
         {pinPhy:11,power:gpio.HIGH},
     ];
@@ -28,6 +28,9 @@ exports.addaction = function (req, res, next) {
     //     isSuccess : true,
     //     pinState : JSON.stringify(allState)
     // });
+    utils.end(req,next,{
+        isSuccess : true,
+    });
 };
 exports.deleteaction = function (req, res, next) {
     let allState = gpio.readAllPinState();
@@ -36,4 +39,7 @@ exports.deleteaction = function (req, res, next) {
     //     isSuccess : true,
     //     pinState : JSON.stringify(allState)
     // });
+    utils.end(req,next,{
+        isSuccess : true,
+    });
 };
