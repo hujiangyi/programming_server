@@ -3,8 +3,8 @@
     "port" : 8001
   },
   "raspberrydb" : {
-    "ip" : "172.17.1.251",
-    "port" : 30003,
+    "ip" : "127.0.0.1",
+    "port" : 27017,
     "db" : "raspberry",
     "username" : "rb",
     "password" : "raspberry"
