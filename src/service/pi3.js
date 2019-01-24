@@ -18,6 +18,11 @@ exports.resetpin = function (req, res) {
     });
 };
 exports.addaction = function (req, res) {
+    let action = [
+        {pinPhy:3,power:gpio.HIGH},
+        {pinPhy:11,power:gpio.HIGH},
+    ];
+    gpio.doAction(actions)
     // let allState = gpio.readAllPinState();
     // utils.end(req,next,{
     //     isSuccess : true,
@@ -25,7 +30,8 @@ exports.addaction = function (req, res) {
     // });
 };
 exports.deleteaction = function (req, res) {
-    // let allState = gpio.readAllPinState();
+    let allState = gpio.readAllPinState();
+    console.log(allState)
     // utils.end(req,next,{
     //     isSuccess : true,
     //     pinState : JSON.stringify(allState)
