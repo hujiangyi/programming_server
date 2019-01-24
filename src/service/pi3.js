@@ -45,15 +45,19 @@ exports.deleteaction = function (req, res, next) {
 };
 exports.doaction = function (req, res, next) {
     const actionId = req.body.actionId;
-    let query = model.actionlist.findById(actionId);
+    console.log("actionId:" + actionId);
+    let query = model.actions.findById(actionId);
     query.exec(function (err,doc) {
         let re = {};
         if(doc === undefined || doc === null){
+            console.log("here 111");
             re = {
                 isSuccess : false,
             };
         } else {
+            console.log("here 222");
             const actions = doc.get("actionList");
+            console.log("here 222 ：" + actions);
             gpio.doAction(actions);
             re = {
                 isSuccess : true,
