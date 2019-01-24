@@ -10,9 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "chalk": "^2.4.1",
-    "child_process": "^1.0.2",
-    "commander": "^2.19.0",
     "config": "^1.30.0",
     "cookie-parse": "^0.4.0",
     "cookie-parser": "^1.4.3",
@@ -22,15 +19,10 @@
     "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "html": "^1.0.0",
-    "inquirer": "^6.2.1",
     "log4js": "^2.5.3",
     "method-override": "^3.0.0",
     "moment": "^2.23.0",
     "mongoose": "^5.4.0",
-    "node-cmd": "^3.0.0",
-    "node-rsa": "^1.0.1",
-    "node-windows": "^0.1.14",
-    "unzip": "^0.1.11",
     "pigpio":"^1.2.1"
   }
 }
