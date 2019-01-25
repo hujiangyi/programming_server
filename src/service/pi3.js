@@ -6,7 +6,7 @@ exports.loadpinstate = function (req, res, next) {
     let allState = gpio.readAllPinState();
     utils.end(req,next,{
         isSuccess : true,
-        pinstate : allState
+        pinstate : allState,
     });
 };
 exports.resetpin = function (req, res, next) {
@@ -14,7 +14,9 @@ exports.resetpin = function (req, res, next) {
     let allState = gpio.readAllPinState();
     utils.end(req,next,{
         isSuccess : true,
-        pinState : allState
+        pinstate : allState,
+        operationLog : "重置所有PIN脚为低电平。",
+        batchNo : -99999,
     });
 };
 exports.loadactions = function (req, res, next) {
@@ -73,20 +75,19 @@ exports.doaction = function (req, res, next) {
     query.exec(function (err,doc) {
         let re = {};
         if(doc === undefined || doc === null){
-            console.log("here 111");
             re = {
                 isSuccess : false,
             };
         } else {
-            console.log("here 222");
+            const name = doc.get("name");
             const actions = doc.get("actionList");
-            console.log("here 222 ：" + actions);
             gpio.doAction(actions);
             re = {
                 isSuccess : true,
+                operationLog : "执行动作[" + name + "]",
+                batchNo : -99999,
             };
         }
-
         utils.end(req,next,re);
     });
 };
