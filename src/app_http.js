@@ -51,6 +51,7 @@ app.post('/api/modifyPassword', login.modifyPassword);
 app.post('/api/loadOperationLogList', operationlog.loadOperationLogList);
 app.post('/api/loadpinstate', pi3.loadpinstate);
 app.post('/api/resetpin', pi3.resetpin);
+app.post('/api/loadactions', pi3.loadactions);
 app.post('/api/addaction', pi3.addaction);
 app.post('/api/deleteaction', pi3.deleteaction);
 app.post('/api/doaction', pi3.doaction);

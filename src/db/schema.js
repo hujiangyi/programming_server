@@ -10,7 +10,7 @@ const userSchema = new Schema({
 exports.user = db.model('user', userSchema);
 
 const actionSchema = new Schema({
-    pinPhy: Number,
+    phyNum: Number,
     power: Number,
 }, { _id:false});
 
