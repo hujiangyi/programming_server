@@ -5,15 +5,15 @@
 
 ## 效果展示
 
-![登录界面]("https://www.jay123.club/fs/raspberry/login.png","登录界面")
+![登录界面](https://www.jay123.club/fs/raspberry/login.png "登录界面")
 
-![物理编码]("https://www.jay123.club/fs/raspberry/phy.png","树莓派针脚状态展示-物理编码")
-![BCM编码]("https://www.jay123.club/fs/raspberry/bcm.png","树莓派针脚状态展示-BCM编码")
-![功能名]("https://www.jay123.club/fs/raspberry/func.png","树莓派针脚状态展示-功能名")
+![物理编码](https://www.jay123.club/fs/raspberry/phy.png "树莓派针脚状态展示-物理编码")
+![BCM编码](https://www.jay123.club/fs/raspberry/bcm.png "树莓派针脚状态展示-BCM编码")
+![功能名](https://www.jay123.club/fs/raspberry/func.png "树莓派针脚状态展示-功能名")
 
-![添加动作]("https://www.jay123.club/fs/raspberry/addaction.png","添加动作")
+![添加动作](https://www.jay123.club/fs/raspberry/addaction.png "添加动作")
 
-![执行动作和针脚实时状态展示]("https://www.jay123.club/fs/raspberry/main.png","执行动作和针脚实时状态展示")
+![执行动作和针脚实时状态展示](https://www.jay123.club/fs/raspberry/main.png "执行动作和针脚实时状态展示")
 
 ## 底层依赖
 此项目使用pigpio库控制管脚
